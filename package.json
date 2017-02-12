@@ -1,0 +1,38 @@
+{
+  "name": "react-app-template",
+  "version": "1.0.0",
+  "description": "React App Template",
+  "author": "Isaac A. Dettman <idettman@gmail.com>",
+  "license": "ISC",
+  "main": "index.js",
+  "config": {
+    "port": "8080",
+    "BUILD_MODES": {
+      "DEV": "development",
+      "PROD": "production"
+    }
+  },
+  "engines": {
+    "npm": ">=3.0.0",
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"build": "rollup --config rollup.js",
+	"rollup": "rollup"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "rollup": "^0.41.4",
+    "rollup-plugin-buble": "^0.15.0",
+    "rollup-plugin-cleanup": "^1.0.0",
+    "rollup-plugin-commonjs": "^7.0.0",
+    "rollup-plugin-inject": "^2.0.0",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-progress": "^0.2.1",
+    "rollup-plugin-uglify": "^1.0.1"
+  }
+}
