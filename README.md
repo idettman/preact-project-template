@@ -11,13 +11,14 @@
 </p>
 
 ## Features
+> *Requires NodeJS 6 and NPM 3*
+> *ES 2015 modules, syntax and JSX transpiled by Rollup and Bublé*
 
-ES 2015 modules, syntax and JSX transpiled by Rollup and Bublé
+## Install
 
-## Instructions
-> Requires NodeJS 6 and NPM 3
-> Download or clone this repository
-> `npm install`
+Download or clone this repository
+
+Open a command prompt and run `npm install` from project root
 
 ## Build
 
