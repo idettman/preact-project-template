@@ -12,7 +12,7 @@
 
 ## Features
 
-ECMAScript 2015 modules, syntax and JSX transpiled using Rollup and Bublé
+ES 2015 modules, syntax and JSX transpiled by Rollup and Bublé
 
 Instructions
 
@@ -20,6 +20,13 @@ Requires NodeJS 6 and NPM 3
 
 Download or clone this repository
 
-Run `npm install` to download dependencies
+Install dependencies
+`npm install`
 
-Build using: run `npm run build`
+Build
+`run npm run build`
+
+
+## License
+
+Released under the [MIT license](https://github.com/rollup/rollup/blob/master/LICENSE.md).
