@@ -39,7 +39,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup --config rollup.js",
+    "build": "npm run dev",
+	"dev": "rollup --config rollup.js --env=development",
+	"prod": "NODE_ENV=production rollup --config rollup.js --env=production",
     "rollup": "rollup"
   },
   "dependencies": {
