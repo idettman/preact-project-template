@@ -11,8 +11,10 @@
 </p>
 
 ## Features
-> *Requires NodeJS 6 and NPM 3*
 > *ES 2015 modules, syntax and JSX transpiled by Rollup and Bublé*
+
+> *Requires NodeJS 6 and NPM 3*
+
 
 ## Install
 
@@ -22,7 +24,7 @@ Open a command prompt and run `npm install` from project root
 
 ## Build
 
-`run npm run build`
+From the project root `npm run build`
 
 ## License
 
