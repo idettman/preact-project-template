@@ -1,5 +1,5 @@
 
-# React Application Template
+# Preact Application Template
 
 <p align="center">
   <a href="https://github.com/idettman/react-app-template/blob/master/LICENSE.md">

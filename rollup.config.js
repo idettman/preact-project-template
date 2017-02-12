@@ -6,7 +6,6 @@ import buble from 'rollup-plugin-buble';
 import progress from 'rollup-plugin-progress';
 import visualizer from 'rollup-plugin-visualizer';
 import uglify from 'rollup-plugin-uglify';
-//import inject from 'rollup-plugin-inject';
 
 const environmentMode = 'const process={' +
 	'env:{' +
@@ -32,16 +31,14 @@ export default {
 		}),
 		commonjs({
 			include: [
-				'node_modules/fbjs/**',
-				'node_modules/object-assign/**',
-				'node_modules/react/**',
-				'node_modules/react-dom/**'
+				'node_modules/**'
 			],
 			ignoreGlobals: true,
 			sourceMap: true,
 		}),
 		buble({
-			/*exclude: "node_modules/!**",*/
+			jsx: 'h',
+			exclude: "node_modules/!**",
 			transforms: {
 				modules: false
 			}
@@ -50,17 +47,6 @@ export default {
 		progress({
 			clearLine: true
 		}),
-
-		/*
-		 Dependency Injection
-		 https://github.com/rollup/rollup-plugin-inject
-
-		 inject({
-		 include: '* * / *.js',
-		 exclude: 'node_modules/**',
-		 modules: {}
-		 })
-		 */
 
 		(process.env.NODE_ENV === 'production' && uglify()),
 

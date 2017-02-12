@@ -1,13 +1,15 @@
-import React from 'react'
+import {h, Component} from 'preact'
 
-export class DummyComponent extends React.Component {
-	render()
-	{
+class DummyComponent extends Component {
+
+	render() {
 		return (
 			<article>
 				<h1>Hi from DummyComponent.</h1>
-				<em>Now let's play with React!</em>
+				<em>Now let's play with Preact!</em>
 			</article>
 		)
 	}
 }
+
+export default DummyComponent;

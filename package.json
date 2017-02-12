@@ -1,8 +1,8 @@
 {
-  "name": "react-app-template",
-  "title": "React Application Template",
+  "name": "preact-project-template",
+  "title": "Preact Project Template",
   "version": "1.0.0",
-  "description": "React application template project using Rollup and Buble for transpilation",
+  "description": "Preact project template using Rollup and Buble for transpilation",
   "author": {
     "name": "Isaac Dettman",
     "url": "https://github.com/idettman"
@@ -10,29 +10,22 @@
   "license": "MIT",
   "keywords": [
     "Bublé",
-    "React",
+    "Preact",
     "Rollup",
     "StandardJS"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/idettman/react-app-template"
+    "url": "https://github.com/idettman/preact-project-template"
   },
   "main": "index.js",
   "files": [
-	"src/*",
-	"bin/index.html",
-	"rollup.js",
-	".eslintrc",
-	".npmrc"
+    "src/*",
+    "bin/index.html",
+    "rollup.config.js",
+    ".eslintrc",
+    ".npmrc"
   ],
-  "config": {
-    "port": "8080",
-    "BUILD_MODES": {
-      "DEV": "development",
-      "PROD": "production"
-    }
-  },
   "engines": {
     "npm": ">=3.0.0",
     "node": ">=6.0.0"
@@ -40,20 +33,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run dev",
-	"dev": "rollup --config rollup.js --env=development",
-	"prod": "NODE_ENV=production rollup --config rollup.js --env=production",
+    "dev": "rollup --config rollup.config.js --env=development",
+    "prod": "NODE_ENV=production rollup --config rollup.config.js --env=production",
     "rollup": "rollup"
   },
   "dependencies": {
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "preact": "^7.2.0"
   },
   "devDependencies": {
     "rollup": "^0.41.4",
     "rollup-plugin-buble": "^0.15.0",
-    "rollup-plugin-cleanup": "^1.0.0",
     "rollup-plugin-commonjs": "^7.0.0",
-    "rollup-plugin-inject": "^2.0.0",
     "rollup-plugin-node-resolve": "^2.0.0",
     "rollup-plugin-progress": "^0.2.1",
     "rollup-plugin-uglify": "^1.0.1",

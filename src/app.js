@@ -1,7 +1,6 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import {DummyComponent} from './components/dummy-component.js';
+import {h, render} from 'preact'
+import DummyComponent from './components/dummy-component.js';
 
 const root = document.querySelector('main');
 
-ReactDOM.render(<DummyComponent />, root);
+render(<DummyComponent/>, root);
