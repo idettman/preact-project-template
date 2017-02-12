@@ -14,18 +14,14 @@
 
 ES 2015 modules, syntax and JSX transpiled by Rollup and Bublé
 
-Instructions
+## Instructions
+> Requires NodeJS 6 and NPM 3
+> Download or clone this repository
+> `npm install`
 
-Requires NodeJS 6 and NPM 3
+## Build
 
-Download or clone this repository
-
-Install dependencies
-`npm install`
-
-Build
 `run npm run build`
-
 
 ## License
 
