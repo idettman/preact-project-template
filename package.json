@@ -1,10 +1,31 @@
 {
   "name": "react-app-template",
+  "title": "React Application Template",
   "version": "1.0.0",
-  "description": "React App Template",
-  "author": "Isaac A. Dettman <idettman@gmail.com>",
-  "license": "ISC",
+  "description": "React application template project using Rollup and Buble for transpilation",
+  "author": {
+    "name": "Isaac Dettman",
+    "url": "https://github.com/idettman"
+  },
+  "license": "MIT",
+  "keywords": [
+    "Bublé",
+    "React",
+    "Rollup",
+    "StandardJS"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/idettman/react-app-template"
+  },
   "main": "index.js",
+  "files": [
+	"src/*",
+	"bin/index.html",
+	"rollup.js",
+	".eslintrc",
+	".npmrc"
+  ],
   "config": {
     "port": "8080",
     "BUILD_MODES": {
@@ -18,8 +39,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-	"build": "rollup --config rollup.js",
-	"rollup": "rollup"
+    "build": "rollup --config rollup.js",
+    "rollup": "rollup"
   },
   "dependencies": {
     "react": "^15.4.2",
@@ -33,6 +54,12 @@
     "rollup-plugin-inject": "^2.0.0",
     "rollup-plugin-node-resolve": "^2.0.0",
     "rollup-plugin-progress": "^0.2.1",
-    "rollup-plugin-uglify": "^1.0.1"
+    "rollup-plugin-uglify": "^1.0.1",
+    "rollup-plugin-visualizer": "^0.2.0"
+  },
+  "standard": {
+    "ignore": [
+      "build"
+    ]
   }
 }

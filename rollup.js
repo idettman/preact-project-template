@@ -3,34 +3,32 @@
 import commonjs from 'rollup-plugin-commonjs';
 import node from 'rollup-plugin-node-resolve';
 import buble from 'rollup-plugin-buble';
-//import progress from 'rollup-plugin-progress';
+import progress from 'rollup-plugin-progress';
+import visualizer from 'rollup-plugin-visualizer';
+import uglify from 'rollup-plugin-uglify';
 //import inject from 'rollup-plugin-inject';
-//import cleanup from 'rollup-plugin-cleanup';
-//import uglify from 'rollup-plugin-uglify';
 
 const environmentMode = 'const process={' +
 	'env:{' +
-		'NODE_ENV:"development"' +
+	'NODE_ENV:"development"' +
 	'}' +
-'};';
+	'};';
 
 export default {
+	entry: 'src/app.js',
+	intro: environmentMode,
 
 	exports: 'none',
-
 	format: 'iife',
-
-	entry: 'src/app.js',
-
 	dest: 'bin/app-bundle.js',
-
-	intro: environmentMode,
+	sourceMap: true,
 
 	plugins: [
 		node({
 			jsnext: true,
 			main: true,
-			browser: true
+			browser: true,
+			module: true
 		}),
 		commonjs({
 			include: [
@@ -39,40 +37,37 @@ export default {
 				'node_modules/react/**',
 				'node_modules/react-dom/**'
 			],
-			sourceMap: false,
+			ignoreGlobals: true,
+			sourceMap: true,
 		}),
 		buble({
-			exclude: "node_modules/**",
+			/*exclude: "node_modules/!**",*/
 			transforms: {
 				modules: false
 			}
-		})
+		}),
 
-		/*,
 		progress({
 			clearLine: true
-		})*/
+		}),
 
 		/*
-		Dependency Injection
-		https://github.com/rollup/rollup-plugin-inject
+		 Dependency Injection
+		 https://github.com/rollup/rollup-plugin-inject
 
-		inject({
-		 	include: '* * / *.js',
-			exclude: 'node_modules/**',
-			modules: {}
-		})
-		*/
-
-		/*
-		Minify
-		(process.env.NODE_ENV === 'production' && uglify()),
-		*/
-
-		/*
-		Remove comments, trailing spaces, etc
-		https://github.com/aMarCruz/rollup-plugin-cleanup
-		cleanup()
+		 inject({
+		 include: '* * / *.js',
+		 exclude: 'node_modules/**',
+		 modules: {}
+		 })
 		 */
-	]
+
+		(process.env.NODE_ENV === 'production' && uglify()),
+
+		visualizer({
+			filename: './bin/statistics.html',
+			sourcemap: false
+		})
+	],
+	external: ['fs', 'path', 'readline']
 }
