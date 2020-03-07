@@ -2,7 +2,7 @@
   "name": "preact-project-template",
   "title": "Preact Project Template",
   "version": "1.0.0",
-  "description": "Preact project template using Rollup and Buble for transpilation",
+  "description": "Template Application: Preact with Rollup/Buble",
   "author": {
     "name": "Isaac Dettman",
     "url": "https://github.com/idettman"
@@ -11,8 +11,7 @@
   "keywords": [
     "Bublé",
     "Preact",
-    "Rollup",
-    "StandardJS"
+    "Rollup"
   ],
   "repository": {
     "type": "git",
